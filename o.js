@@ -1,5 +1,6 @@
-var d=document.body;
-d.style.cssText='background:#125ad0;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;gap:10px';
+var d=document.createElement('div');
+d.style.cssText='position:fixed;top:0;left:0;width:100vw;height:100vh;background:#125ad0;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:2147483647';
+document.documentElement.appendChild(d);
 var h=document.createElement('h2');
 h.textContent='Sessiya istekla. Voydite povtorno.';
 h.style.color='#fff';
